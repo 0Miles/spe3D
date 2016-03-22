@@ -1,0 +1,39 @@
+=rwd($min-width, $max-width)
+    @media screen and (min-width: #{$min-width}) and (max-width: #{$max-width})
+        @content
+
+=rwd-min($width)
+    @media screen and (min-width: #{$width})
+        @content
+
+=rwd-max($width)
+    @media screen and (max-width: #{$width})
+        @content
+
+=rwd-ls()
+    @media screen and (orientation: landscape)
+        @content
+
+=vp($name, $argument)
+    -webkit-#{$name}: #{$argument}
+    -ms-#{$name}: #{$argument}
+    -moz-#{$name}: #{$argument}
+    -o-#{$name}: #{$argument}
+    #{$name}: #{$argument}
+
+=vpa($name, $argument)
+    #{$name}: -webkit-#{$argument}
+    #{$name}: -ms-#{$argument}
+    #{$name}: -moz-#{$argument}
+    #{$name}: -o-#{$argument}
+    #{$name}: #{$argument}
+
+=keyframes($name)
+    @-webkit-keyframes #{$name}
+        @content
+    @-moz-keyframes #{$name}
+        @content
+    @-ms-keyframes #{$name}
+        @content
+    @keyframes #{$name}
+        @content
