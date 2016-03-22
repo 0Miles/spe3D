@@ -40,14 +40,14 @@ $(window).ready(function() {
     }
   });
 
-  // $('body').parallax({speedFactor: 0.2});
-  // $('#home').parallax({speedFactor: 0.6});
-  // $('#works').parallax({speedFactor: 0.6});
-  // $('#works_bg2').parallax({speedFactor: 0.6});
-  // $('#business_bg').parallax({speedFactor: 0.6});
-  // $('#team_bg').parallax({speedFactor: 0.6});
-  // $('#contact').parallax({speedFactor: 0.2});
-  // $('#contact_bg').parallax({speedFactor: 0.6});
+  $('body').parallax({speedFactor: 0.2});
+  $('#home').parallax({speedFactor: 0.6});
+  $('#works').parallax({speedFactor: 0.6});
+  $('#works_bg2').parallax({speedFactor: 0.6});
+  $('#business_bg').parallax({speedFactor: 0.6});
+  $('#team_bg').parallax({speedFactor: 0.6});
+  $('#contact').parallax({speedFactor: 0.2});
+  $('#contact_bg').parallax({speedFactor: 0.6});
   $('.gifs').gifplayer();
 
   $("#works").waypoint(function(){
