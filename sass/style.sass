@@ -1,6 +1,17 @@
 @import ./import/_reset.sass
 @import ./import/_mixin.sass
 
+html, body
+    width: 100%
+    height: 100%
+    font-family: sans-serif
+
+body
+    background-image: url(../images/bg/bg.jpg)
+    background-attachment: fixed
+    +vp(background-size, cover)
+    color: #FFF
+
 #nav_bar
     position: fixed
     background: #000
@@ -22,3 +33,20 @@
             color: #FFF
             &:active, &:hover
                 color: #0776bd
+
+.container
+    display: table-cell
+    text-align: center
+    vertical-align: middle
+
+#home
+    display: table
+    width: 100%
+    height: 100%
+    background-image: url(../images/bg/home_bg_c.png)
+    background-attachment: fixed
+    +vp(background-size, cover)
+    h2
+        font-family: "Comfortaa", cursive
+        font-size: 32px
+        font-weight: normal
