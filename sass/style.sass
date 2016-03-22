@@ -7,7 +7,7 @@ html, body
     font-family: sans-serif
 
 body
-    background-image: url(../images/bg/bg.jpg)
+    background-image: url(../images/bg.jpg)
     background-attachment: fixed
     +vp(background-size, cover)
     color: #FFF
@@ -43,7 +43,7 @@ body
     display: table
     width: 100%
     height: 100%
-    background-image: url(../images/bg/home_bg_c.png)
+    background-image: url(../images/home_bg_c.png)
     background-attachment: fixed
     +vp(background-size, cover)
     h2
@@ -73,6 +73,12 @@ body
             bottom: 0
             position: absolute
 
+.decoration
+    width: 100%
+    img
+        margin-top: -2px
+        width: 100%
+
 .scroll_icon
     position: absolute
     text-align: center
@@ -95,3 +101,9 @@ body
         +vp(opacity, 0)
     100%
         +vp(opacity, 1)
+
+#about_header1
+    position: absolute
+    bottom: -5px
+    margin-top: 0
+    z-index: 1
