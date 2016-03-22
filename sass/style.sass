@@ -21,7 +21,7 @@ body
     text-align: center
     z-index: 999
 
-.nav_wrap
+.nav_wrapper
     display: inline-block
     padding: 0 10px
     .nav_item
@@ -50,3 +50,25 @@ body
         font-family: "Comfortaa", cursive
         font-size: 32px
         font-weight: normal
+
+.logo_wrapper
+    display: inline-block
+    position: relative
+    width: 65%
+    max-width: 350px
+    overflow: hidden
+    margin-top: -10%
+    margin-bottom: 10%
+    .logo
+        position: relative
+        width: 100%
+        margin-left: 0
+        padding-top: 100%
+        +vp(opacity, 0)
+        img
+            width: 100%
+            left: 0
+            top: 0
+            right: 0
+            bottom: 0
+            position: absolute
