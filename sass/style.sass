@@ -1,2 +1,27 @@
 @import ./import/_reset.sass
 @import ./import/_mixin.sass
+
+#nav_bar
+    position: fixed
+    background: #000
+    top: 0
+    left: 0
+    width: 100%
+    text-align: center
+    overflow: hidden
+    +vp(overflow-x, auto)
+    z-index: 999
+
+.nav_wrap
+    display: inline-block
+    white-space: nowrap
+    padding: 0 10px
+    .nav_item
+        display: inline-block
+        font-family: "Comfortaa", cursive
+        padding: 25px 10px
+        font-size: 22px
+        a
+            color: #FFF
+            &:active, &:hover
+                color: #0776bd
