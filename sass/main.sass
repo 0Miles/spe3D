@@ -210,6 +210,23 @@ h1
     p
         padding: 0 12%
 
+.team_item_photo
+    display: inline-block
+    width: 65%
+    img.team_item_photo
+        position: relative
+        margin-left: -115%
+        padding: 10%
+        background: #00427a
+        width: 110%
+        +vp(transition, opacity 0.1s linear)
+        &:active
+            +vp(opacity, 0)
+    img.team_item_photo_hover
+        padding: 10%
+        padding-top: 0
+        width: 110%
+
 #about_content2
     background-image: url(../images/about_content.png)
     padding: 5% 0
@@ -218,16 +235,12 @@ h1
         .about_item_icon
             display: inline-block
             width: 100%
-            a
+            img.img1
+                position: relative
+                margin-left: -36%
                 +vp(transition, opacity 0.1s linear)
                 &:active
                     +vp(opacity, 0)
-                img.img1
-                    position: relative
-                    margin-left: -36%
-                    +vp(transition, opacity 0.1s linear)
-                    &:active
-                        +vp(opacity, 0)
             img
                 display: inline-block
                 width: 35%
