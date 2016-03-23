@@ -2,6 +2,7 @@
 @import ./import/_mixin.sass
 
 *
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
     -webkit-touch-callout: none
     -webkit-user-select: none
     -khtml-user-select: none
@@ -446,7 +447,7 @@ h1
     width: 100%
     background-image: url(../images/contact_bg.png)
     background-attachment: fixed
-    +vp(background-size, 100%)
+    +vp(background-size, auto 100%)
     h1
         padding-top: 20%
     p
@@ -467,15 +468,15 @@ h1
     background-size: contain
     background-repeat: no-repeat
     a
-        +vp(transition, opacity 0.1s linear)
-        &:active
-            +vp(opacity, 0)
+        // +vp(transition, opacity 0.1s linear)
+        // &:active
+        //     +vp(opacity, 0)
         img
             width: 100%
-            // +vp(opacity, 0)
-            +vp(transition, opacity 0.1s linear)
-            &:active
-                +vp(opacity, 0)
+            +vp(opacity, 0)
+            // +vp(transition, opacity 0.1s linear)
+            // &:active
+            //     +vp(opacity, 0)
 
 
 #contact_item_facebook
@@ -483,21 +484,33 @@ h1
     left: 18%
     z-index: 850
     margin-top: 32%
-    background-image: url(../images/c_facebook_h.png)
-
+    background-image: url(../images/c_facebook.png)
+    +vp(transition, background 0.2s linear)
+    &:active
+        background-image: url(../images/c_facebook_h.png)
 #contact_item_youtube
     right: 22%
     margin-top: 40%
-    background-image: url(../images/c_youtube_h.png)
+    background-image: url(../images/c_youtube.png)
+    +vp(transition, background 0.2s linear)
+    &:active
+        background-image: url(../images/c_youtube_h.png)
 #contact_item_insta
     left: 31%
     z-index: 850
     margin-top: 62%
-    background-image: url(../images/c_insta_h.png)
+    background-image: url(../images/c_insta.png)
+    +vp(transition, background 0.2s linear)
+    &:active
+        background-image: url(../images/c_insta_h.png)
 #contact_item_twitter
     right: 22%
     margin-top: 62%
-    background-image: url(../images/c_twitter_h.png)
+    background-image: url(../images/c_twitter.png)
+    +vp(transition, background 0.2s linear)
+    &:active
+        background-image: url(../images/c_twitter_h.png)
+
 #contact_bg
     width: 100%
     background-image: url(../images/contact_bg_c.png)
