@@ -218,12 +218,16 @@ h1
         .about_item_icon
             display: inline-block
             width: 100%
-            img.img1
-                position: relative
-                margin-left: -36%
+            a
                 +vp(transition, opacity 0.1s linear)
                 &:active
                     +vp(opacity, 0)
+                img.img1
+                    position: relative
+                    margin-left: -36%
+                    +vp(transition, opacity 0.1s linear)
+                    &:active
+                        +vp(opacity, 0)
             img
                 display: inline-block
                 width: 35%
@@ -467,13 +471,13 @@ h1
     background-size: contain
     background-repeat: no-repeat
     a
-        // +vp(transition, opacity 0.1s linear)
+        +vp(transition, opacity 0.1s linear)
         &:active
             +vp(opacity, 0)
         img
             width: 100%
             // +vp(opacity, 0)
-            // +vp(transition, opacity 0.1s linear)
+            +vp(transition, opacity 0.1s linear)
             &:active
                 +vp(opacity, 0)
 
