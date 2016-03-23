@@ -1,5 +1,5 @@
 var playt = false;
-$(window).ready(function() {
+$(window).load(function() {
   // $("body").everyTime("5s",function(){
   //   if($(".logo").css("margin-left") == "0px"){
   //     $(".logo").css("margin-left", "-100%");
