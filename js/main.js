@@ -62,7 +62,7 @@ $(window).load(function() {
   $('#works_bg2').parallax({speedFactor: 0.6});
   $('#business_bg').parallax({speedFactor: 0.6});
   $('#team_bg').parallax({speedFactor: 0.6});
-  $('#contact').parallax({speedFactor: 0.1});
+  // $('#contact').parallax({speedFactor: 0.1});
   $('#contact_bg').parallax({speedFactor: 0.6});
   $('.gifs').gifplayer();
 
