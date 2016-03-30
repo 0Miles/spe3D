@@ -62,7 +62,7 @@
       <p>
         Speed 3D Inc. aims to provide the most easy-to-access 3D experience and digital creation tool for everyone!
         <br><br>
-        With our apps, everyone can create 3D animations and 3D printable models without any 3D modeling skills.
+        With our apps, everyone can create 3D animations and <span id="about_1"></span>3D printable models without any 3D modeling skills.
       </p>
     </div>
 
@@ -129,8 +129,13 @@
     <div id="works_content" class="content">
       <div id="works_phone">
         <div id="noclick"></div>
-        <img id="phone" src="images/works_phone.png" data-gif="images/works_phone.gif" class="gifs"/>
-        <!-- <img id="phone" src="images/works_phone.gif" /> -->
+        <video id="works_video" width="100%" onended="videoend()">
+          <source src="images/works_phone.mp4" type='video/mp4'>
+          <source src="images/works_phone.webm" type='video/webm' >
+        </video>
+        <div id="works_play">
+            <img src="images/play.png" alt="">
+        </div>
       </div>
       <h3>Cartoon, Animate, and Turn Yourself in 3D</h3>
       <p>Insta3D is an FREE mobile app, available on iOS

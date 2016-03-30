@@ -1,5 +1,7 @@
-var playt = false;
-
+var playf = false;
+function videoend() {
+    $("#works_play").show();
+}
 /*! Copyright 2011, Ben Lin (http://dreamerslab.com/)
 * Licensed under the MIT License (LICENSE.txt).
 *
@@ -23,7 +25,11 @@ $(window).load(function() {
   //     $(".logo").css("margin-left", "0");
   //   }
   // });
-
+  var video=$("#works_video")[0];
+  $("#works_play").click(function() {
+      video.play();
+      $("#works_play").hide();
+  });
 
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
@@ -43,19 +49,6 @@ $(window).load(function() {
     var $spy = $(this).scrollspy('refresh')
   });
 
-  $("#noclick").click(function() {
-    if($(".play-gif").css("display")=="block") {
-      $("#phone").click();
-      setTimeout(
-      function()
-      {
-        $("#works_phone > div.gifplayer-wrapper > img:nth-child(4)").remove();
-        $("#phone").show()
-        $(".play-gif").show();
-      }, 6950);
-    }
-  });
-
   $('body').parallax({speedFactor: 0.2});
   $('#home').parallax({speedFactor: 0.6});
   $('#works').parallax({speedFactor: 0.6});
@@ -67,10 +60,34 @@ $(window).load(function() {
   $('.gifs').gifplayer();
 
   $("#works").waypoint(function(){
-    if(playt == false){
-      $("#noclick").click();
-      playt = true;
-    }
+      if (playf == false){
+          $("#works_play").click();
+          playf = true;
+      }
+  });
+
+  $("#about_content").waypoint(function(){
+     $("#about_img1").css("opacity","1");
+     $("#about_img2").css("opacity","1");
+     $("#about_img3").css("opacity","1");
+  });
+
+  $("#about_1").waypoint(function(){
+     $("#about_img1").css("opacity","0");
+     $("#about_img2").css("opacity","1");
+     $("#about_img3").css("opacity","1");
+  });
+
+  $("#about_img1").waypoint(function(){
+     $("#about_img1").css("opacity","1");
+     $("#about_img2").css("opacity","0");
+     $("#about_img3").css("opacity","1");
+  });
+
+  $("#about_img2").waypoint(function(){
+     $("#about_img1").css("opacity","1");
+     $("#about_img2").css("opacity","1");
+     $("#about_img3").css("opacity","0");
   });
 
   $(".team_box").scroll(function () {
@@ -80,18 +97,6 @@ $(window).load(function() {
       }
   });
 
-  // $(window).scroll(function(){
-  //   var scrollVal = $(this).scrollTop();
-  //
-  //   var otop1 = $("#about_content").position().top;
-  //   var otop2 = $("#about_img1").position().top;
-  //   var otop3 = $("#about_img2").position().top;
-  //   $("#about_img1").css("opacity", 1-((scrollVal - otop1)/100));
-  //   $("#about_img2").css("opacity", 1-((scrollVal - otop2)/100));
-  //   $("#about_img3").css("opacity", 1-((scrollVal - otop3)/100));
-  //
-  //
-  // });
 });
 
 var list = [
