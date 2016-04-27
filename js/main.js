@@ -25,8 +25,9 @@ $(window).load(function() {
   //     $(".logo").css("margin-left", "0");
   //   }
   // });
-  var video=$("#works_video")[0];
+  // var video=$("#works_video")[0];
   $("#works_play").click(function() {
+      var video = document.getElementById("works_video");
       video.play();
       $("#works_play").hide();
   });
@@ -61,8 +62,9 @@ $(window).load(function() {
 
   $("#works").waypoint(function(){
       if (playf == false){
+          var video = document.getElementById("works_video");
           video.play();
-        //   $("#works_play").hide();
+          $("#works_play").hide();
           playf = true;
       }
   });
