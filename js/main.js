@@ -62,7 +62,7 @@ $(window).load(function() {
   $("#works").waypoint(function(){
       if (playf == false){
           video.play();
-          $("#works_play").hide();
+        //   $("#works_play").hide();
           playf = true;
       }
   });
