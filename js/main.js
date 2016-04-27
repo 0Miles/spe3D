@@ -27,9 +27,7 @@ $(window).load(function() {
   // });
   // var video=$("#works_video")[0];
   $("#works_play").click(function() {
-      var video = document.getElementById("works_video");
-      video.load();
-      video.play();
+      $("#works_video").get(0).play();
       $("#works_play").hide();
   });
 
@@ -63,9 +61,7 @@ $(window).load(function() {
 
   $("#works").waypoint(function(){
       if (playf == false){
-          var video = document.getElementById("works_video");
-          video.load();
-          video.play();
+          $("#works_video").get(0).play();
           $("#works_play").hide();
           playf = true;
       }
