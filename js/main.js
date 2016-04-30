@@ -60,12 +60,12 @@ $(window).load(function() {
   $('#contact_bg').parallax({speedFactor: 0.6});
   $('.gifs').gifplayer();
 
-  // $("#works").waypoint(function(){
-  //     if (playf == false){
-  //         $("#works_play").click();
-  //         playf = true;
-  //     }
-  // });
+  $("#works").waypoint(function(){
+      if (playf == false){
+          $("#works_play").click();
+          playf = true;
+      }
+  });
 
   $("#about_content").waypoint(function(){
      $("#about_img1").css("opacity","1");
