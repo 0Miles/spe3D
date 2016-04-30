@@ -27,20 +27,10 @@ $(window).load(function() {
   // });
   // var video=$("#works_video")[0];
 
-    var video = document.querySelector('video');
-    makeVideoPlayableInline(video);
-
-    // or if you're already using jQuery:
-    var video = $('video').get(0);
-    makeVideoPlayableInline(video);
-
-    // or if you have multiple videos:
-    $('video').get().forEach(makeVideoPlayableInline)
-
-  $("#works_play").click(function() {
-      video.play();
-      $("#works_play").hide();
-  });
+  // $("#works_play").click(function() {
+  //     video.play();
+  //     $("#works_play").hide();
+  // });
 
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
@@ -70,12 +60,12 @@ $(window).load(function() {
   $('#contact_bg').parallax({speedFactor: 0.6});
   $('.gifs').gifplayer();
 
-  $("#works").waypoint(function(){
-      if (playf == false){
-          $("#works_play").click();
-          playf = true;
-      }
-  });
+  // $("#works").waypoint(function(){
+  //     if (playf == false){
+  //         $("#works_play").click();
+  //         playf = true;
+  //     }
+  // });
 
   $("#about_content").waypoint(function(){
      $("#about_img1").css("opacity","1");

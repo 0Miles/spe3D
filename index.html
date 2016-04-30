@@ -5,12 +5,12 @@
     <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" id="viewport" name="viewport">
     <title>Speed 3D Inc.</title>
     <script type="text/javascript">
-        // var urlHref = location.href;
-        if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            // urlHref = urlHref.replace('mobile/index', 'index');
-            urlHref = 'http://www.spe3d.co'
-            window.location = urlHref;
-        }
+        // // var urlHref = location.href;
+        // if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        //     // urlHref = urlHref.replace('mobile/index', 'index');
+        //     urlHref = 'http://www.spe3d.co'
+        //     window.location = urlHref;
+        // }
    </script>
     <link href='https://fonts.googleapis.com/css?family=Comfortaa:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/iSlider.min.css">
@@ -141,11 +141,10 @@
         }
     </style>
 
-
     <div id="works_content" class="content">
       <div id="works_phone">
         <div id="noclick"></div>
-        <video id="works_video" width="100%" onended="videoend()">
+        <video id="works_video" width="100%">
           <source src="images/works_phone.mp4" type='video/mp4'>
           <source src="images/works_phone.webm" type='video/webm' >
         </video>
@@ -153,6 +152,7 @@
             <img src="images/play.png" alt="">
         </div>
       </div>
+
       <h3>Cartoon, Animate, and Turn Yourself in 3D</h3>
       <p>Insta3D is an FREE mobile app, available on iOS
         and Android, that can easily turn any portrait photo
@@ -545,5 +545,19 @@
   <script src="js/waypoints.min.js"></script>
   <script src="js/iSlider.min.js"></script>
   <script src="js/main.js"></script>
+
+  <script>
+    // one video
+    var video = document.querySelector('video');
+    makeVideoPlayableInline(video);
+
+    // or if you're already using jQuery:
+    var video = $('video').get(0);
+    makeVideoPlayableInline(video);
+
+    // or if you have multiple videos:
+    $('video').get().forEach(makeVideoPlayableInline)
+</script>
+
 </body>
 </html>
