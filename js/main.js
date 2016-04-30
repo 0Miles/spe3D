@@ -1,7 +1,7 @@
 var playf = false;
-function videoend() {
-    $("#works_play").show();
-}
+// function videoend() {
+//     $("#works_play").show();
+// }
 /*! Copyright 2011, Ben Lin (http://dreamerslab.com/)
 * Licensed under the MIT License (LICENSE.txt).
 *
@@ -27,11 +27,11 @@ $(window).load(function() {
   // });
   var video=$("#works_video")[0];
 
-  $("#works_play").click(function() {
-      video.load();
-      video.play();
-      $("#works_play").hide();
-  });
+  // $("#works_play").click(function() {
+  //     video.load();
+  //     video.play();
+  //     $("#works_play").hide();
+  // });
 
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
@@ -61,12 +61,12 @@ $(window).load(function() {
   $('#contact_bg').parallax({speedFactor: 0.6});
   $('.gifs').gifplayer();
 
-  $("#works").waypoint(function(){
-      if (playf == false){
-          $("#works_play").click();
-          playf = true;
-      }
-  });
+  // $("#works").waypoint(function(){
+  //     if (playf == false){
+  //         $("#works_play").click();
+  //         playf = true;
+  //     }
+  // });
 
   $("#about_content").waypoint(function(){
      $("#about_img1").css("opacity","1");
