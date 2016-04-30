@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" id="viewport" name="viewport">
     <title>Speed 3D Inc.</title>
+    <script type="text/javascript">
+        // var urlHref = location.href;
+        if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            // urlHref = urlHref.replace('mobile/index', 'index');
+            urlHref = 'http://www.spe3d.co'
+            window.location = urlHref;
+        }
+   </script>
     <link href='https://fonts.googleapis.com/css?family=Comfortaa:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/iSlider.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -126,12 +134,20 @@
     <div class="decoration">
       <img src="images/works_header.png" alt="">
     </div>
+
+    <style>
+        video::-webkit-media-controls-start-playback-button {
+          display:none;
+        }
+    </style>
+
+
     <div id="works_content" class="content">
       <div id="works_phone">
         <div id="noclick"></div>
-        <video id="works_video" width="100%" preload="auto" onended="videoend()">
+        <video id="works_video" width="100%" onended="videoend()">
           <source src="images/works_phone.mp4" type='video/mp4'>
-          <!-- <source src="images/works_phone.webm" type='video/webm' > -->
+          <source src="images/works_phone.webm" type='video/webm' >
         </video>
         <div id="works_play">
             <img src="images/play.png" alt="">
@@ -522,6 +538,7 @@
 
 
   <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="js/iphone-inline-video.browser.js"></script>
   <script src="js/jquery.parallax-1.1.3.js"></script>
   <script src="js/jquery.gifplayer.min.js"></script>
   <!-- <script src="js/jquery.timers-1.1.2.js"></script> -->

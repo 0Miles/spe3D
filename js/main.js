@@ -26,8 +26,19 @@ $(window).load(function() {
   //   }
   // });
   // var video=$("#works_video")[0];
+
+    var video = document.querySelector('video');
+    makeVideoPlayableInline(video);
+
+    // or if you're already using jQuery:
+    var video = $('video').get(0);
+    makeVideoPlayableInline(video);
+
+    // or if you have multiple videos:
+    $('video').get().forEach(makeVideoPlayableInline)
+
   $("#works_play").click(function() {
-      $("#works_video").get(0).play();
+      video.play();
       $("#works_play").hide();
   });
 
@@ -61,8 +72,7 @@ $(window).load(function() {
 
   $("#works").waypoint(function(){
       if (playf == false){
-          $("#works_video").get(0).play();
-          $("#works_play").hide();
+          $("#works_play").click();
           playf = true;
       }
   });
