@@ -25,12 +25,12 @@ $(window).load(function() {
   //     $(".logo").css("margin-left", "0");
   //   }
   // });
-  // var video=$("#works_video")[0];
+  var video=$("#works_video")[0];
 
-  // $("#works_play").click(function() {
-  //     video.play();
-  //     $("#works_play").hide();
-  // });
+  $("#works_play").click(function() {
+      video.play();
+      $("#works_play").hide();
+  });
 
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
