@@ -28,6 +28,7 @@ $(window).load(function() {
   var video=$("#works_video")[0];
 
   $("#works_play").click(function() {
+      video.load();
       video.play();
       $("#works_play").hide();
   });
